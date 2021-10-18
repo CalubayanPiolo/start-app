@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-facebook',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacebookPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+  
+  about(){
+    this.router.navigate(['about'])
+  }
+  
 
   ngOnInit() {
   }

@@ -8,35 +8,44 @@ const routes: Routes = [
     component: HomePage,
     children:[
       {
-        path:'Google',
-        children:[
-          {
-            path: '',
-            loadChildren: () => import('../pages/google/google.module').then( m => m.GooglePageModule)
-          }
-        ]
-      },
-      {
         path:'Facebook',
         children:[
           {
-            path:'',
-            loadChildren: () => import('../pages/facebook/facebook.module').then(m => m.FacebookPageModule)
+            path: '',
+            loadChildren: () => import('../pages/facebook/facebook.module').then( m => m.FacebookPageModule)
           }
         ]
       },
       {
-        path:'Twitter',
+        path:'messages',
         children:[
           {
             path:'',
-            loadChildren: () => import('../pages/twitter/twitter.module').then(m => m.TwitterPageModule)
+            loadChildren: () => import('../pages/messages/messages.module').then(m => m.MessagesPageModule)
           }
         ]
       },
       {
+      path:'about',
+      children:[
+        {
+          path:'',
+          loadChildren: () => import('../pages/about/about.module').then(m => m.AboutPageModule)
+        }
+      ]
+    },
+    {
+      path:'signup',
+      children:[
+        {
+          path:'',
+          loadChildren: () => import('../pages/signup/signup.module').then(m => m.SignupPageModule)
+        }
+      ]
+    },
+      {
         path:'',
-      redirectTo: 'Google',
+      redirectTo: 'Facebook',
       pathMatch: 'full'
       }
     ]

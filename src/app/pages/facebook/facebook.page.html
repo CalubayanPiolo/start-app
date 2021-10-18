@@ -1,108 +1,673 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Facebook</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-segment (ionChange)="segmentChanged($event)" color="secondary" [(ngModel)]="type">
-    <ion-segment-button value="News Feed">
-      <ion-label>News Feed</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="Messages">
-      <ion-label>Messages</ion-label>
-    </ion-segment-button>
-  </ion-segment>
- 
-  <div [ngSwitch]="type">
-    <ion-card *ngSwitchCase="">
-      <ion-card-header>
-        <ion-img src="/assets/images/a.png"></ion-img>
-        <ion-card-title>Information Technology</ion-card-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+              <ion-card-title class="aboutus">
+                Are you looking for answers?
+              </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Find out more about us!</ion-label>
+            <ion-item lines="none" class="about">
+            <ion-button fill="clear" (click)="about()">
+              <ion-label>
+                Go to About Page
+              </ion-label>
+            </ion-button>
+          </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="onyourmind">
+          <ion-card-header>
+        <ion-item lines="none">
+          <ion-input type="text" placeholder="What's on your mind?"></ion-input>
+        </ion-item>
       </ion-card-header>
-      <ion-card-content>
-        Do you  want to be a developer? Come and join us!
-      </ion-card-content>
-      <ion-button color="warning">Like</ion-button>
-      <ion-button color="warning">Comment</ion-button>
-      <ion-button color="warning">Share</ion-button>
-    </ion-card>
-  </div>
+      </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>
+              <h3 class="name">Piolo Buenaventura Calubayan</h3>
+              <h6 class="idtag">@princefries0211</h6>
+            </ion-label>
+            <ion-avatar slot="start">
+              <img class="pio" src="/assets/images/pio.jpg">
+            </ion-avatar>
+            </ion-item>
+            <ion-label>
+              I always sing, watch dramas, series and any movies I can dowload online. I always drink coffee and stream my favorite songs the whole day everyday. I am the biggest fan of Taylor Swift and I can stream all her 9 albums in one day. My friends call me pirata, I can download anything.
+            </ion-label>
 
-  <div [ngSwitch]="type">
-    <ion-card *ngSwitchCase="'News Feed'">
-      <ion-card-header>
-        <ion-img src="/assets/images/a.png"></ion-img>
-        <ion-card-title>Information Technology</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Do you  want to be a developer? Come and join us!
-      </ion-card-content>
-      <ion-button color="warning">Like</ion-button>
-      <ion-button color="warning">Comment</ion-button>
-      <ion-button color="warning">Share</ion-button>
-    </ion-card>
-  </div>
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <div [ngSwitch]="type">
-      <ion-list *ngSwitchCase="'Messages'">
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="/assets/images/taylor.jpeg">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Taylor Swift</h2>
-            <h3>You guys!!!!</h3>
-            <p>...Ready for it?</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="/assets/images/ed.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Ed Sheeran</h2>
-            <h3>No, have bad habits thooo</h3>
-            <p>Are you a baddass?</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="/assets/images/selena.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Selena Gomez</h2>
-            <h3>Kill em with kindness :/</h3>
-            <p>What can u say bout haters?</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="/assets/images/olivia.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Olivia Rodrigo</h2>
-            <h3>Good 4 u</h3>
-            <p>She's my new girlfriend</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="/assets/images/conan.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Conan Gray</h2>
-            <h3>I'm a detective....</h3>
-            <p>How do u solve problems?</p>
-          </ion-label>
-        </ion-item>
-
-
-      </ion-list>
-    </div>
   
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Quick Settings</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-icon name="person" color="success" slot="start"></ion-icon>
+              <ion-label>Personal and Account Information</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-icon name="shield" color="danger" slot="start"></ion-icon>
+              <ion-label>Password and Security</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-icon name="card" color="primary" slot="start"></ion-icon>
+              <ion-label>Payments</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-icon name="globe-outline" color="warning" slot="start"></ion-icon>
+              <ion-label>Language and Region</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-icon name="notifications-outline" color="dark" slot="start"></ion-icon>
+              <ion-label>Notifications</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-icon name="location" color="danger" slot="start"></ion-icon>
+              <ion-label>Location</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/pio.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Piolo Buenaventura Calubayan</h1>
+                <h6 class="idtag">@princefries0211</h6>
+              </ion-label>
+            </ion-item>
+            <h5>yeah I'm the black sheep, but you can hug me hihi</h5>
+            <img src="assets/images/meme2.png">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/ed.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Ed Sheeran</h1>
+                <h6 class="idtag">@yaboithinkingoutloud</h6>
+              </ion-label>
+            </ion-item>
+            <h5>Uhm, I dont't think it was that bad...</h5>
+            <img src="assets/images/meme1.jpg">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/conan.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Conan Gray</h1>
+                <h6 class="idtag">@wishIwereheather</h6>
+              </ion-label>
+            </ion-item>
+            <h5>So stream astronomy now!!!</h5>
+            <img src="assets/images/meme3.jpg">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/taylor.jpeg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Taylor Allison Swift</h1>
+                <h6 class="idtag">@taylorswift13</h6>
+              </ion-label>
+            </ion-item>
+            <h5>Look what you made me do, Kanye :/</h5>
+            <img src="assets/images/meme4.jpg">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/olivia.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Olivia Rodrigo</h1>
+                <h6 class="idtag">@youbetrayedme</h6>
+              </ion-label>
+            </ion-item>
+            <h5>Calling the attention of all sad girls...</h5>
+            <img src="assets/images/meme5.jpg">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="pio" src="assets/images/olivia.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h1 class="name">Olivia Rodrigo</h1>
+                <h6 class="idtag">@youbetrayedme</h6>
+              </ion-label>
+            </ion-item>
+            <h5>No caption. Just me, yeah, the pretty me.</h5>
+            <img src="assets/images/olivia.jpg">
+            <ion-tabs>
+              <ion-tab-bar>
+                <ion-tab-button>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  Like
+                </ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="mail"></ion-icon>
+                  Comment</ion-tab-button>
+                <ion-tab-button>
+                  <ion-icon name="share"></ion-icon>
+                  Share</ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      
+      
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Active Chats</ion-card-title>
+          </ion-card-header>
+        <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/conan.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Conan Gray</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/taylor.jpeg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Taylor Swift</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/ed.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ed Sheeran</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/selena.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Selena Gomez</h2>
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="/assets/images/olivia.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Olivia Rodrigo</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

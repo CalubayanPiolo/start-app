@@ -1,19 +1,38 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
-
-    <ion-tab-button tab="Google">
-      <ion-icon name="logo-google"></ion-icon>
-      <icon-label>Google</icon-label>
+  <ion-tab-bar slot="top">
+    <ion-tab-button>
+      <ion-icon name="logo-facebook" class="fblogo"></ion-icon>
     </ion-tab-button>
-
+    <ion-tab-button>
+      <ion-icon name=""></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name=""></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-input type="text" placeholder="Search">
+        <ion-icon name="search"></ion-icon>
+      </ion-input>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name=""></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name=""></ion-icon>
+    </ion-tab-button>
     <ion-tab-button tab="Facebook">
-      <ion-icon name="logo-facebook"></ion-icon>
-      <icon-label>Facebook</icon-label>
+      <ion-icon name="home"></ion-icon>
+      <icon-label>Home</icon-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="Twitter">
-      <ion-icon name="logo-twitter"></ion-icon>
-      <icon-label>Twitter</icon-label>
+    <ion-tab-button tab="messages">
+      <ion-icon name="mail"></ion-icon>
+      <icon-label>Messages</icon-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="logout()">
+      <ion-icon name="power"></ion-icon>
+      <icon-label>Logout</icon-label>
     </ion-tab-button>
 
   </ion-tab-bar>

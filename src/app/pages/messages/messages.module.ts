@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GooglePageRoutingModule } from './google-routing.module';
+import { MessagesPageRoutingModule } from './messages-routing.module';
 
-import { GooglePage } from './google.page';
+import { MessagesPage } from './messages.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GooglePageRoutingModule
+    MessagesPageRoutingModule
   ],
-  declarations: [GooglePage]
+  declarations: [MessagesPage]
 })
-export class GooglePageModule {}
+export class MessagesPageModule {}
